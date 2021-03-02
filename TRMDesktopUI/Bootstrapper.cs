@@ -33,6 +33,8 @@ namespace TRMDesktopUI
             _container
                 .Singleton<IWindowManager, WindowManager>()
                 .Singleton<IEventAggregator, EventAggregator>()
+
+                // making sure the assigned interface will always be this apihelper class
                 .Singleton<IAPIHelper, APIHelper>();
 
             GetType().Assembly.GetTypes()
